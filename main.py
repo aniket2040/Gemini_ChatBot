@@ -1,7 +1,7 @@
 import os 
 from dotenv import load_dotenv
 import streamlit as st
-import google.genai as genai
+import google.generativeai as genai
 
 load_dotenv()
 
@@ -62,4 +62,5 @@ if user_prompt:
     gemini_response = st.session_state.chat_session.send_message(user_prompt)
     
     with st.chat_message("assistant"):
+
         st.markdown(gemini_response.text)
